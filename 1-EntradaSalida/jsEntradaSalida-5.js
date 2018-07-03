@@ -6,7 +6,11 @@ function mostrar()
 	var nombre;
 	var edad;
 
-	
-	
-}
+	nombre=document.getElementById('elNombre').value;
+	edad=document.getElementById('laEdad').value;
 
+
+	alert("Usted se llama "+nombre+" y tiene "+edad+" años");
+
+	// utilizamos +para concatenar datos y antes de ingresar el nombre de la variable
+}
