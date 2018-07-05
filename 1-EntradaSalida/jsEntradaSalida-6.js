@@ -4,24 +4,36 @@ mostrar el resulto por medio de "ALERT"*/
 function sumar()
 {
 
-	var numero1;
-	var numero2;
+	var numeroUno;
+	var numeroDos;
 	var resultado;
 
+	//ctrl + D, se definen todas las variables.
+	//no hay problema que se llama igual que en el html
 
-	numero1=document.getElementById('numeroUno').value;
-	numero2=document.getElementById('numeroDos').value;
+	numeroUno=document.getElementById('numeroUno').value;
+	
+	numeroUno=parseInt(numeroUno);
 
-	//hay que convertir las variables en numericas
-	numero1 = parseInt(numero1);
-	numero2 = parseInt(numero2);	
+	numeroDos=document.getElementById('numeroDos').value;
 
-	resultado = (numero1+numero2);	
+	numeroDos=parseInt(numeroDos);
 
-	alert("la suma es "+resultado);
 
-	//Operaciones basicas: +suma-resta*mult/division%resto.
 
+	resultado=(numeroUno+numeroDos);
+
+
+	alert(resultado);
+
+	// el signo + sirve para sumar y para concatenar, si es tecto lo concatena, si es un numero lo suma.
+	/* string ( cadenas ), puede tener letras ("lala" "33" "la33") y numeros (22 33)
+	sino lo transformamos con parseInt, lo toma como texto. 
+	
+	para chequear paso por paso como funciona el programa y como va guardando las variables, tengo que ir al chrome y presionar F12, luego en la pestaña "sources", seleccionamos nuestro js y lo probamos paso por paso. ( add breakpoint ).
+	
+
+	*/
 
 
 

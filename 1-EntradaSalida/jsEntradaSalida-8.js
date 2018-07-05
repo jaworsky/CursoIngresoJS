@@ -7,7 +7,7 @@ function SacarResto()
 	
 	var dividendo;
 	var divisor;
-	var resultado;
+	var resto;
 
 	dividendo=document.getElementById('numeroDividendo').value;
 	divisor=document.getElementById('numeroDivisor').value;
@@ -15,8 +15,9 @@ function SacarResto()
 	dividendo=parseInt(dividendo);
 	divisor=parseInt(divisor);
 
-	resultado=(dividendo%divisor);
-	alert("El resto es "+resultado);
+    resto=(dividendo%divisor);
+	alert("El resto es "+resto);
 
+// para seleccionar todas las variables, se repite CTRL+D para ir seleccionando todas las variables que queremos cambiar
 
 }
