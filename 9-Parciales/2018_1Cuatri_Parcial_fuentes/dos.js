@@ -11,8 +11,4 @@ alert("usted es "+nombre+ " y vive en la localidad de "+localidad);
 
 
 
-
-
-
-
 }
