@@ -16,7 +16,7 @@ function mostrar()
 
 	descuento=(precio*porcentajededescuento)/100;
 	
- 	alert=(descuento);
+ 	alert(descuento);
 
 	// 1
 
@@ -27,7 +27,7 @@ function mostrar()
 
 	iva=(precio*21)/100;
 
-	alert=(iva);
+	alert(iva);
 
 	// 3
 
