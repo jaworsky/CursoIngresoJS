@@ -11,48 +11,75 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
 function CalcularPrecio () 
 {
  	
- 	var precio;
- 	var cantidaddelamparas;
- 	var descuento;
- 	var marca;
+var marca;
+var cantidaddelamparas;
+var precio;
+var preciooriginal;
+var diezporciento;
 
+cantidaddelamparas=document.getElementById('Cantidad').value;
+marca=document.getElementById('Marca').value;
 
+precio=(cantidaddelamparas*35);
+precio=parseInt(precio);
 
- 	marca=document.getElementById('Marca').value;
- 	cantidaddelamparas=document.getElementById('Cantidad').value;
+if (cantidaddelamparas>=6)
+ {
+	precio=precio*0.5;
+	//punto A
+							}
 
+	else if (cantidaddelamparas==5 && marca=="ArgentinaLuz") 
+	{
+		precio=precio*0.6;
+	// punto B	
+	}						
 
- 	
+		else if (cantidaddelamparas==5 && marca!="ArgentinaLuz")
+		{
+			precio=precio*0.7;
+			//punto B terminado
+		}					
+ 
+			else if (cantidaddelamparas==4) 
+			{
+				if (marca=="ArgentinaLuz" || marca=="FelipeLamparas")
+				{
+					precio=precio*0.75;
+				}
+					else {
+						precio=precio*0.8;
+					     }
+					     //punto C
+			}
 
+				else if(cantidaddelamparas==3) // punto D, entramos con else if para cantidad 3, +if+elseif+else
+				{
+					if(marca=="ArgentinaLuz")
+					{
+						precio=precio*0.85;
+					}
+					else if(marca=="FelipeLamparas")
+					{
+						precio=precio*0.90;
+					}
+					else
+					{
+						precio=precio*0.95;
+					}
+				}	
 
- 	if (cantidaddelamparas>=6) {
+						
 
-
- 		precio=35
- 		precio=parseInt(precio);
- 		descuento=(precio*cantidaddelamparas)/2;
-
- 		document.getElementById('precioDescuento').value=descuento;
-
-
- 	}
-
- 	if else (cantidaddelamparas<=5 && marca=="ArgentinaLuz") {
-
- 		precio=35
- 		precio=parseInt(precio);
- 		precio=(precio*cantidaddelamparas);
- 		descuento=(precio*40)/100;
- 		document.getElementById('precioDescuento').value=descuento;
-
-
-
- 	}
-
-
-
-
-
-
-
+if (precio>=120)
+{	
+	preciooriginal=(precio);
+	diezporciento=(precio*10)/100;
+	precio=(precio+diezporciento);
+	alert("IIBB Usted pago "+preciooriginal+" ,siendo "+diezporciento+" el impuesto que se pagó");
+	// punto E
 }
+
+document.getElementById('precioDescuento').value=precio;
+
+ }
