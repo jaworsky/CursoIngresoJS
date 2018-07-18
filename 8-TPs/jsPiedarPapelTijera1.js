@@ -26,7 +26,11 @@ if (eleccionmia==eleccionMaquina)
 {
 	alert("empató");
 }
-	else if(eleccionMaquina==2 || eleccionMaquina==3)	
+	else if(eleccionMaquina==2)	
+	{
+		alert("perdió");
+	}
+	else if(eleccionMaquina==3)	
 	{
 		alert("ganó");
 	}
@@ -44,13 +48,13 @@ if (eleccionmia==eleccionMaquina)
 {
 	alert("empató");
 }
-	else if(eleccionmia<eleccionMaquina)
+	else if(eleccionMaquina==1)
 	{
-		alert("perdió");
+		alert("ganó");
 	}
-		else
+		else if (eleccionMaquina==3)
 		{
-			alert("ganó");
+			alert("perdió");
 		}
 
 
