@@ -60,12 +60,8 @@ function Materiales ()
 	largo=parseInt(largo);
 	ancho=parseInt(ancho);
 
-	sumalargoyancho=(largo+ancho);
-
-	totalrectangulo=(sumalargoyancho*2);
-
-	bolsasdecemento=(totalrectangulo*2);
-	bolsasdecal=(totalrectangulo*3);
+	bolsasdecemento=(largo*2);
+	bolsasdecal=(ancho*3);
 
 
 	alert("Se necesitaran "+bolsasdecemento+" bolsas de cemento y "+bolsasdecal+" bolsas de cal");
