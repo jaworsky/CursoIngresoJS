@@ -22,7 +22,7 @@ function comenzar()
 numeroSecreto=Math.floor(Math.random()*(101-1))+1;
 numeroSecreto=parseInt(numeroSecreto);
 //genero el numero secreto.
-alert(numeroSecreto);
+//alert(numeroSecreto);
 
 }
 
@@ -36,40 +36,40 @@ contador=contador+1;
 
 if (numeroingresado==numeroSecreto && contador==1)
 {
-	alert("Usted es un Psíquico");
+alert("Usted es un Psíquico");
 }
 
-	else if (numeroingresado==numeroSecreto && contador==2)	
+else if (numeroingresado==numeroSecreto && contador==2)	
+{
+alert("Excelente percepción”");
+}
+
+else if (numeroingresado==numeroSecreto && contador==3)
+{
+alert("Esto es suerte");
+}
+else if (numeroingresado==numeroSecreto && contador==4)
+{
+alert("Excelente técnica");
+}
+else if (numeroingresado==numeroSecreto && contador==5)
+{
+alert("Usted está en la media");
+}
+	else if (numeroingresado==numeroSecreto) // no puede haber un else if dentro de un else if
 	{
-	alert("Excelente percepción”");
-	}
-
-		else if (numeroingresado==numeroSecreto && contador==3)
+		if (contador>=6 && contador<=10)
 		{
-			alert("Esto es suerte");
+		alert("falta técnica");
 		}
-			else if (numeroingresado==numeroSecreto && contador==4)
-			{
-				alert("Excelente técnica");
-			}
-				else if (numeroingresado==numeroSecreto && contador==5)
-				{
-					alert("Usted está en la media");
-				}
-					else if (numeroingresado==numeroSecreto) // no puede haber un else if dentro de un else if
-					{
-						if (contador>=6 && contador<=10)
-						{
-							alert("falta técnica");
-						}
-						else
-						{
-							alert("afortunado en el amor");
-						}
+		else
+		{
+		alert("afortunado en el amor");
+		}
 
 
 
 
-					}
+	}
 
 }
