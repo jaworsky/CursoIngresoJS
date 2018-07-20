@@ -72,4 +72,6 @@ alert("Usted está en la media");
 
 	}
 
+document.getElementById('intentos').value=contador;
+
 }

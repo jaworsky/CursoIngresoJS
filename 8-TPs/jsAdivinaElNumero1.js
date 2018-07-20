@@ -45,4 +45,6 @@ if (numeroingresado==numeroSecreto)
 		alert("falta ...");
 	}
 
+document.getElementById('intentos').value=contador;
+
 }
