@@ -7,10 +7,6 @@ function comenzar()
 {
 	//Genero el número RANDOM entre 1 y 3
 eleccionMaquina=Math.floor(Math.random()*(4-1))+1;
-alert(eleccionMaquina);
-
-
-
 
 }//FIN DE LA FUNCIÓN
 function piedra()
@@ -38,11 +34,8 @@ if (eleccionmia==eleccionMaquina)
 
 //alert("empate"+ContadorDeEmpates+ " gano"+ContadorDeGanadas+ "perdio"+ContadorDePerdidas);
 
-document.getElementById('ganadas').value=ContadorDeGanadas;
-document.getElementById('perdidas').value=ContadorDePerdidas;
-document.getElementById('empatadas').value=ContadorDeEmpates;
-
-
+mostrarResultado()
+comenzar() // esto hace que se ejecute la funcion comenzar otra vez y genere el numero random de nuevo.
 
 }
 function papel()
@@ -68,10 +61,9 @@ if (eleccionmia==eleccionMaquina)
 		}
 
 
-document.getElementById('ganadas').value=ContadorDeGanadas;
-document.getElementById('perdidas').value=ContadorDePerdidas;
-document.getElementById('empatadas').value=ContadorDeEmpates;
 
+mostrarResultado()
+comenzar()
 
 }
 function tijera()
@@ -97,9 +89,10 @@ if (eleccionmia==eleccionMaquina)
 	}
 
 
-document.getElementById('ganadas').value=ContadorDeGanadas;
-document.getElementById('perdidas').value=ContadorDePerdidas;
-document.getElementById('empatadas').value=ContadorDeEmpates;
+
+
+mostrarResultado()
+comenzar()
 
 	
 }

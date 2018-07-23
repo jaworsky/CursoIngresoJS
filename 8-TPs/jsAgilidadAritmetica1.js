@@ -10,11 +10,17 @@ var respuesta;
 function comenzar()
 {
 
-	
+var numeroRandom;
+
+numeroRandom=Math.floor(Math.random()*(11-1) )+1;
+alert(numeroRandom);
 
 }//FIN DE LA FUNCIÓN
 function Responder()
 {
+	
+
+
 	
 
 }//FIN DE LA FUNCIÓN
