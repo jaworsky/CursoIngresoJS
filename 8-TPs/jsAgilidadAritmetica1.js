@@ -10,9 +10,12 @@ var respuesta;
 function comenzar()
 {
 
-var numeroRandom;
+var numeroRandom1;
+var numeroRandom2;
 
-numeroRandom=Math.floor(Math.random()*(11-1) )+1;
+numeroRandom1=Math.floor(Math.random()*(11-1) )+1;
+numeroRandom2=Math.floor(Math.random()*(11-1) )+1;
+
 alert(numeroRandom);
 
 }//FIN DE LA FUNCIÓN
@@ -21,6 +24,8 @@ function Responder()
 	
 
 
-	
+
+
+
 
 }//FIN DE LA FUNCIÓN

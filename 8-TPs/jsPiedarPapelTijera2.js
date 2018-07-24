@@ -2,6 +2,9 @@ var eleccionMaquina;
 var ContadorDeEmpates=0;
 var ContadorDeGanadas=0;
 var ContadorDePerdidas=0;
+// esto se hace para q las variables vivan fuera de las funciones "variables globales"
+// todas las funciones van a poder acceder a estas variables.
+
 
 function comenzar()
 {
@@ -19,7 +22,7 @@ eleccionmia=1;
 if (eleccionmia==eleccionMaquina)
 {
 	alert("empató");
-	ContadorDeEmpates=ContadorDeEmpates+1;
+	ContadorDeEmpates=ContadorDeEmpates+1;  // se puede escribir tambien como contadordeempates++ o ++contadordeempates (depende si esta en la misma linea, si sumamos y lo mostramos o mostramos y desp sumamos)
 }
 	else if(eleccionMaquina==2)	
 	{
@@ -34,8 +37,8 @@ if (eleccionmia==eleccionMaquina)
 
 //alert("empate"+ContadorDeEmpates+ " gano"+ContadorDeGanadas+ "perdio"+ContadorDePerdidas);
 
-mostrarResultado()
-comenzar() // esto hace que se ejecute la funcion comenzar otra vez y genere el numero random de nuevo.
+mostrarResultado();
+comenzar(); // esto hace que se ejecute la funcion comenzar otra vez y genere el numero random de nuevo.
 
 }
 function papel()
@@ -62,8 +65,8 @@ if (eleccionmia==eleccionMaquina)
 
 
 
-mostrarResultado()
-comenzar()
+mostrarResultado();
+comenzar();
 
 }
 function tijera()
@@ -91,13 +94,13 @@ if (eleccionmia==eleccionMaquina)
 
 
 
-mostrarResultado()
-comenzar()
+mostrarResultado();
+comenzar();  // las funciones hacen 1 sola cosa
 
 	
 }
 
-function mostrarResultado() // se ejecuta solo? no..
+function mostrarResultado() // se ejecuta solo? no.. hay que llamar a la funcion mostrarResultado en cada funcion
 {
 
 document.getElementById('ganadas').value=ContadorDeGanadas;
@@ -107,3 +110,20 @@ document.getElementById('empatadas').value=ContadorDeEmpates;
 
 
 }
+
+
+/* acomulador
+
+ACUM=ACUM+VAR2;
+a la variables se le sumen otras variables
+
+
+BANERA=true
+
+toma un valor booleano, nos va a servir para utilizarlo en un if
+if(banera)
+{
+	bandera=false;
+}
+
+*/

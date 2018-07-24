@@ -35,13 +35,13 @@ if (cantidaddelamparas>=6)
 	// punto B	
 	}						
 
-		else if (cantidaddelamparas==5 && marca!="ArgentinaLuz")
+		else if (cantidaddelamparas==5) // no es necesario aclarar que la marca es diferente, porque para eso esta el primer else if
 		{
 			precio=precio*0.7;
 			//punto B terminado
 		}					
  
-			else if (cantidaddelamparas==4) 
+			else if (cantidaddelamparas==4) // se pueden poner 3 variables en un else if
 			{
 				if (marca=="ArgentinaLuz" || marca=="FelipeLamparas")
 				{
@@ -52,7 +52,10 @@ if (cantidaddelamparas>=6)
 					     }
 					     //punto C
 			}
-
+// se podria haber echo todo junto else if(cantidadlamparas==3&&marca==felipe)
+// 									else if(cantidadlamparas==3&&marca==argluz)
+//									else if(cantidaddelamparas==3)
+	
 				else if(cantidaddelamparas==3) // punto D, entramos con else if para cantidad 3, +if+elseif+else
 				{
 					if(marca=="ArgentinaLuz")
@@ -73,6 +76,8 @@ if (cantidaddelamparas>=6)
 
 if (precio>=120)
 {	
+
+	// los ingresos brutos se calucan en base al precio final ( ya con el descuento)* modificar
 	preciooriginal=(precio);
 	diezporciento=(precio*10)/100;
 	precio=(precio+diezporciento);
