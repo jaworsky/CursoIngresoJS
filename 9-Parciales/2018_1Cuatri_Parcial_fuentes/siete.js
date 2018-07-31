@@ -1,6 +1,15 @@
 function mostrar()
 {
 
+/* jose M 25
+MARIA F 16
+JESUS M 33
+FER F 81
+*/
+
+
+
+/*
 var nota1;
 var nota2;
 var nota3;
@@ -135,16 +144,106 @@ promediototal=(nota1+nota2+nota3+nota4+nota5)/5;
 
 alert("El promedio total de las notas es "+promediototal);
 
+*/
 
 
 
+var contadordeMujeres;
+var contadordeHombres;
+var contadordeMayoresdeedad;
+var contadordeMenoresdeedad;
+var nombre;
+var sexo; // validarlo.
+var edad; //0 y 100
+var contador;
+var edadmasBaja;
+var edadmasAlta;
 
 
 
+contador=0;
+contadordeMujeres=0;
+contadordeHombres=0;
+contadordeMenoresdeedad=0;
+contadordeMayoresdeedad=0;
 
 
+while(contador<4)
+{
+contador=contador+1;
+
+nombre=prompt("Ingrese el nombre");
+sexo=prompt("ingrese el sexo");
+
+	while(sexo!="m" && sexo!="f")
+{
+		sexo=prompt("Ingrese el sexo");
+
+}
+
+edad=prompt("Ingrese la edad");
+edad=parseInt(edad);
+
+while(isNaN(edad) || edad<0 || edad>100)
+{
+	edad=prompt("ingrese la edad");
+	edad=parseInt(edad);
+}
+
+if(sexo=="m")
+{
+	contadordeHombres=contadordeHombres+1;
+}
+else 
+{
+	contadordeMujeres=contadordeMujeres+1;
+}
+
+
+if(edad>18)
+{
+	contadordeMayoresdeedad=contadordeMayoresdeedad+1;
+}
+else
+{
+	contadordeMenoresdeedad=contadordeMenoresdeedad+1;
+}
+
+if(contador==1)
+{
+	maximo=edad;
+	minimo=edad;
+}
+else 
+{
+	if(edad>maximo)
+		maximo=edad;
+}
+	if(edad<minimo)
+{		
+		minimo=edad;
+}
 
 
 
 
 }
+
+document.write("La cantidad de hombres es: "+contadordeHombres+"<br>");
+document.write("La cantidad de mujeres es: "+contadordeMujeres+"<br>");
+document.write("La cantidad de mayores de edad es: "+contadordeMayoresdeedad+"<br>");
+document.write("La cantidad de menores de edad es: "+contadordeMenoresdeedad+"<br>");
+document.write("La edad mas baja es: "+minimo+"<br>");
+document.write("La edad mas alta es: "+maximo+"<br>");
+
+
+}
+
+
+// promedio de edad mujeres
+promedio de hombres
+promedio de edad total
+nombre del mas viejo
+nombre de mas joven
+sexo del mas viejo
+nombre de la mujer mas vieja
