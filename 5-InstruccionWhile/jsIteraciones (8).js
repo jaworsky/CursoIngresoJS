@@ -7,7 +7,7 @@ function mostrar()
 	
 	var respuesta="si";
 
-	var numero1;
+	var numero;
 
 	while(respuesta=="si")
 
@@ -28,10 +28,6 @@ function mostrar()
 			negativo=negativo*numero;
 
 		}
-
-
-
-
 
 	respuesta=prompt("¿desea continuar? si o no");
 

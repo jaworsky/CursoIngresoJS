@@ -14,13 +14,19 @@ function mostrar()
 
 	{
 
-		
 		numero=prompt("ingrese un numero");
-		contador=contador+1;
 		numero=parseInt(numero);
-		suma=suma+numero;
-		suma=parseInt(suma);
+	
 
+
+		while(isNaN(numero))
+		{
+			numero=prompt("ingrese un numero");
+			numero=parseInt(numero);
+		}
+
+		contador=contador+1;
+		suma=suma+numero;	
 
 	}
 
@@ -30,4 +36,15 @@ function mostrar()
 document.getElementById('suma').value=suma;
 document.getElementById('promedio').value=suma/5;
 
-}//FIN DE LA FUNCIÓN
+}
+//FIN DE LA FUNCIÓN
+
+// para validar solo numeros:
+/*
+while(ISNAN(NUMERO))  // para lo contrario !ISNAN(NUMERO)
+{
+	num=prompt
+	num=parseInt
+}
+
+*/
