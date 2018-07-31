@@ -19,22 +19,19 @@ var numerodelegajo;
 var nacionalidad;
 
 
-
 edad=prompt("ingrese la edad");
 edad=parseInt(edad);
 
-
 // PREGUNTAR COMO VALIDAR SOLO NUMEROS O SOLO TEXTO!!!!!!!!
 
-while(edad>90 || edad<18)
+while(isNaN(edad) || edad>90 || edad<18)
 {
 	console.log(edad);
 	alert("ingrese una edad valida: entre 18 y 90 años inclusive.");
 	edad=prompt("Ingrese la edad");
-
+	edad=parseInt(edad);
 
 }
-
 
 
 
@@ -52,28 +49,39 @@ estadocivil=prompt("Ingrese su estado civil: 1-para soltero, 2-para casados, 3-p
 estadocivil=parseInt(estadocivil);
 
 
-while(estadocivil<1 || estadocivil>4)
+while(isNaN(estadocivil) || estadocivil<1 || estadocivil>4)
 {
 	console.log(estadocivil);
 	estadocivil=prompt(("Ingrese su estado civil: 1-para soltero, 2-para casados, 3-para divorciados y 4-para viudos"));
 
-
 }
+
+	switch(estadocivil)
+	{
+		case 1:
+		estadocivil="Soltero";
+		case 2:
+		estadocivil="Casado";
+		case 3:
+		estadocivil="divorciado";
+		case 4:
+		estadocivil="Viudo";
+	}
 
 
 sueldobruto=prompt("Ingrese el sueldo bruto");
 
-while(sueldobruto<8000)
+while(isNaN(sueldobruto) || sueldobruto<8000)
 {
 	console.log(sueldobruto);
 	sueldobruto=prompt("ingrese el sueldo bruto ( no menor a 8000 )");
+	sueldobruto=parseInt(sueldobruto);
 }
 
 
 numerodelegajo=prompt("Ingrese el numero de legajo (Número de legajo, numérico de 4 cifras, sin ceros a la izquierda.");
 
-
-while(numerodelegajo<1000 || numerodelegajo>9999)
+while(isNaN(numerodelegajo) || numerodelegajo<1000 || numerodelegajo>9999)
 {
 	console.log(numerodelegajo);
 	numerodelegajo=prompt("Ingrese el numero de legajo (Número de legajo, numérico de 4 cifras, sin ceros a la izquierda.");
@@ -87,10 +95,18 @@ while(nacionalidad!="A" && nacionalidad!="E" && nacionalidad!="N")
 {
 	nacionalidad=prompt("ingrese su nacionalidad (Nacionalidad, “A” para argentinos, “E” para extranjeros, “N” para nacionalizados)");
 
-
 }
 
+switch(nacionalidad)
+{
+	case "A":
+	nacionalidad="Argentino";
+	case "E":
+	nacionalidad="Extranjero";
+	case "N":
+	nacionalidad="Nacionalizado";
 
+}
 
 document.getElementById('Edad').value=edad;
 document.getElementById('Sexo').value=sexo;
