@@ -27,7 +27,7 @@ function mostrar()
 
 	var respuesta="si";
 
-	while(respuesta!="no")
+	while(respuesta!="no") // hay que poner isNaN en la respuesta??
 
 	{
 
@@ -87,14 +87,29 @@ function mostrar()
 
 
 		respuesta=prompt("Desea continuar? si o no");
-	
+		
 	}
 
 
 promediopositivos=sumadepositivos/contadordepositivos;
 promediodenegativos=sumadenegativos/contadordenegativos;
 
-document.write(sumadenegativos+"<BR>"+sumadepositivos+"<BR>"+contadordepositivos+"<BR>"+contadordenegativos+"<BR>"+contadordeceros+"<BR>"+contadordepares+"<BR>"+promediopositivos+"<BR>"+promediodenegativos+"<BR>"+mensaje);
+document.write("La suma de negativos es "+sumadenegativos+"<BR>"+"La suma de positivos es "+sumadepositivos+"<BR>"+"La cantidad de positivos es: "+contadordepositivos+"<BR>"+"La cantidad de negativos es: "+contadordenegativos+"<BR>"+"La cantidad de ceros es: "+contadordeceros+"<BR>"+"La cantidad de pares es: "+contadordepares+"<BR>"+"El promedio de positivos es: "+promediopositivos+"<BR>"+"El promedio de negativos es: "+promediodenegativos+"<BR>"+"en total hay: "+mensaje);
 
 
 }//FIN DE LA FUNCIÓN
+
+/* prueba de escritorio OK
+
+	numeros ingresados									
+	1				suma de -	-3	ok			
+prueba escritorio:	1				suma de +	4	ok			
+	1				cont +	4	ok			
+	1				cont -	3	ok			
+	0				cont 0	3	ok			
+	0				cont pares	0	ok	el cero es tomado como numero par		
+	0				promediode+	1	ok			
+	-1				promediode-	-1	ok			
+	-1				mensaje	en total hay mas positivos que negativos				ok
+
+*/
