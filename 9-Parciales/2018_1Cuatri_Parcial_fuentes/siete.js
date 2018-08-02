@@ -158,9 +158,22 @@ var edad; //0 y 100
 var contador;
 var edadmasBaja;
 var edadmasAlta;
+var acomuladordeedaddemujeres;
+var promediodeedaddemujeres;
+var promediodeedaddehombres;
+var acomuladordeedaddehombres;
+var promediodeedadtotal;
+var nombredelmasviejo;
+var nombredelmasjoven;
+var sexodelmasviejo;
+var edaddelamujermasvieja;
 
 
 
+acomuladordeedaddehombres=0;
+promediodeedaddehombres=0;
+promediodeedaddemujeres=0;
+acomuladordeedaddemujeres=0;
 contador=0;
 contadordeMujeres=0;
 contadordeHombres=0;
@@ -177,7 +190,7 @@ sexo=prompt("ingrese el sexo");
 
 	while(sexo!="m" && sexo!="f")
 {
-		sexo=prompt("Ingrese el sexo");
+		sexo=prompt("Ingrese el sexo como f o m");
 
 }
 
@@ -186,21 +199,26 @@ edad=parseInt(edad);
 
 while(isNaN(edad) || edad<0 || edad>100)
 {
-	edad=prompt("ingrese la edad");
+	edad=prompt("ingrese la edad con números entre 0 y 100");
 	edad=parseInt(edad);
 }
 
 if(sexo=="m")
 {
 	contadordeHombres=contadordeHombres+1;
+	acomuladordeedaddehombres=acomuladordeedaddehombres+edad;
+
 }
 else 
 {
 	contadordeMujeres=contadordeMujeres+1;
+	acomuladordeedaddemujeres=acomuladordeedaddemujeres+edad;
+
+
 }
 
 
-if(edad>18)
+if(edad>=18)
 {
 	contadordeMayoresdeedad=contadordeMayoresdeedad+1;
 }
@@ -213,37 +231,97 @@ if(contador==1)
 {
 	maximo=edad;
 	minimo=edad;
+
+
 }
 else 
 {
 	if(edad>maximo)
-		maximo=edad;
+		edadmasAlta=edad;
+		nombredelmasviejo=nombre;
+		sexodelmasviejo=sexo;
+
 }
 	if(edad<minimo)
 {		
-		minimo=edad;
+		edadmasBaja=edad;
+		nombredelmasjoven=nombre;
+
+
+}
+
+if(contadordeMujeres==1)
+{
+
+	edaddelamujermasvieja=edad;
+
+}
+else
+{
+
+	if(edad>edaddelamujermasvieja)
+{
+	edaddelamujermasvieja=edad;
+}
+
 }
 
 
 
 
 }
+
+
+promediodeedaddemujeres=acomuladordeedaddemujeres/contadordeMujeres;
+promediodeedaddehombres=acomuladordeedaddehombres/contadordeHombres;
+
+promediodeedadtotal=(acomuladordeedaddehombres+acomuladordeedaddemujeres)/contador;
+
+
 
 document.write("La cantidad de hombres es: "+contadordeHombres+"<br>");
 document.write("La cantidad de mujeres es: "+contadordeMujeres+"<br>");
 document.write("La cantidad de mayores de edad es: "+contadordeMayoresdeedad+"<br>");
 document.write("La cantidad de menores de edad es: "+contadordeMenoresdeedad+"<br>");
-document.write("La edad mas baja es: "+minimo+"<br>");
-document.write("La edad mas alta es: "+maximo+"<br>");
+document.write("La edad mas baja es: "+edadmasBaja+"<br>");
+document.write("La edad mas alta es: "+edadmasAlta+"<br>");
+document.write("El promedio de edad de las mujeres es: "+promediodeedaddemujeres+"<br>");
+document.write("El promedio de edad de los hombres es: "+promediodeedaddehombres+"<br>");
+document.write("El promedio de edad total es de: "+promediodeedadtotal+"<br>");
+document.write("Nombre del mas viejo: "+nombredelmasviejo+"<br>");
+document.write("Nombre del mas joven: "+nombredelmasjoven+"<br>");
+document.write("El sexo del mas viejo es: "+sexodelmasviejo+"<br>");
+document.write("La edad de la mujer mas vieja es: "+edaddelamujermasvieja+"<br>");
 
 
 }
 
-
-// promedio de edad mujeres
-promedio de hombres
+/*								
+// promedio de edad mujeres ok
+promedio de hombres ok
 promedio de edad total
 nombre del mas viejo
 nombre de mas joven
 sexo del mas viejo
 nombre de la mujer mas vieja
+
+
+
+prueba de escritorio		4 personas	sexo	edad
+				
+		jose	m	25
+		maria	f	15
+		jesus	m	33
+		fer	f	81
+				
+promedio de edad de mujeres: 			48	ok
+promedio de edad de hombres:			29	ok
+promedio de edad total:			38,5	ok
+nombre del mas viejo:			fer	ok
+nombre del mas joven:			maria	ok
+sexo del mas viejo:			f	ok
+nombre de la mujer mas vieja:			fer	
+
+
+
+*/
