@@ -148,123 +148,129 @@ alert("El promedio total de las notas es "+promediototal);
 
 
 
-var contadordeMujeres;
-var contadordeHombres;
-var contadordeMayoresdeedad;
-var contadordeMenoresdeedad;
-var nombre;
-var sexo; // validarlo.
-var edad; //0 y 100
-var contador;
-var edadmasBaja;
-var edadmasAlta;
-var acomuladordeedaddemujeres;
-var promediodeedaddemujeres;
-var promediodeedaddehombres;
-var acomuladordeedaddehombres;
-var promediodeedadtotal;
-var nombredelmasviejo;
-var nombredelmasjoven;
-var sexodelmasviejo;
-var edaddelamujermasvieja;
+
+/*  EJERCICIO ECHO DEL PIZARRON
+
+
+	var contadordeMujeres;
+	var contadordeHombres;
+	var contadordeMayoresdeedad;
+	var contadordeMenoresdeedad;
+	var nombre;
+	var sexo; // validarlo.
+	var edad; //0 y 100
+	var contador;
+	var edadmasBaja;
+	var edadmasAlta;
+	var acomuladordeedaddemujeres;
+	var promediodeedaddemujeres;
+	var promediodeedaddehombres;
+	var acomuladordeedaddehombres;
+	var promediodeedadtotal;
+	var nombredelmasviejo;
+	var nombredelmasjoven;
+	var sexodelmasviejo;
+	var edaddelamujermasvieja;
 
 
 
-acomuladordeedaddehombres=0;
-promediodeedaddehombres=0;
-promediodeedaddemujeres=0;
-acomuladordeedaddemujeres=0;
-contador=0;
-contadordeMujeres=0;
-contadordeHombres=0;
-contadordeMenoresdeedad=0;
-contadordeMayoresdeedad=0;
+	acomuladordeedaddehombres=0;
+	promediodeedaddehombres=0;
+	promediodeedaddemujeres=0;
+	acomuladordeedaddemujeres=0;
+	contador=0;
+	contadordeMujeres=0;
+	contadordeHombres=0;
+	contadordeMenoresdeedad=0;
+	contadordeMayoresdeedad=0;
+	promediodeedaddemujeres=0;
 
+	while(contador<4)
+	{
+	contador=contador+1;
 
-while(contador<4)
-{
-contador=contador+1;
+	nombre=prompt("Ingrese el nombre");
+	sexo=prompt("ingrese el sexo");
 
-nombre=prompt("Ingrese el nombre");
-sexo=prompt("ingrese el sexo");
+		while(sexo!="m" && sexo!="f")
+	{
+			sexo=prompt("Ingrese el sexo como f o m");
 
-	while(sexo!="m" && sexo!="f")
-{
-		sexo=prompt("Ingrese el sexo como f o m");
+	}
 
-}
-
-edad=prompt("Ingrese la edad");
-edad=parseInt(edad);
-
-while(isNaN(edad) || edad<0 || edad>100)
-{
-	edad=prompt("ingrese la edad con números entre 0 y 100");
+	edad=prompt("Ingrese la edad");
 	edad=parseInt(edad);
-}
 
-if(sexo=="m")
-{
-	contadordeHombres=contadordeHombres+1;
-	acomuladordeedaddehombres=acomuladordeedaddehombres+edad;
+	while(isNaN(edad) || edad<0 || edad>100)
+	{
+		edad=prompt("ingrese la edad con números entre 0 y 100");
+		edad=parseInt(edad);
+	}
 
-}
-else 
-{
-	contadordeMujeres=contadordeMujeres+1;
-	acomuladordeedaddemujeres=acomuladordeedaddemujeres+edad;
+	if(sexo=="m")
+	{
+		contadordeHombres=contadordeHombres+1;
+		acomuladordeedaddehombres=acomuladordeedaddehombres+edad;
 
+	}
+	else 
+	{
+		contadordeMujeres=contadordeMujeres+1;
+		acomuladordeedaddemujeres=acomuladordeedaddemujeres+edad;
 
-}
-
-
-if(edad>=18)
-{
-	contadordeMayoresdeedad=contadordeMayoresdeedad+1;
-}
-else
-{
-	contadordeMenoresdeedad=contadordeMenoresdeedad+1;
-}
-
-if(contador==1)
-{
-	maximo=edad;
-	minimo=edad;
+	}
 
 
-}
-else 
-{
-	if(edad>maximo)
+	if(edad>=18)
+	{
+		contadordeMayoresdeedad=contadordeMayoresdeedad+1;
+	}
+	else
+	{
+		contadordeMenoresdeedad=contadordeMenoresdeedad+1;
+	}
+
+	if(contador==1) // en el primer ingreso, no sabemos si puede ser el mayor. entonces lo agregamos tambien para el primer ingreso
+	{
+		maximo=edad;
+		minimo=edad;
 		edadmasAlta=edad;
 		nombredelmasviejo=nombre;
 		sexodelmasviejo=sexo;
 
-}
-	if(edad<minimo)
-{		
-		edadmasBaja=edad;
-		nombredelmasjoven=nombre;
+	}
+	else 
+	{
+		if(edad>maximo)
+		{
+			edadmasAlta=edad;
+			nombredelmasviejo=nombre;
+			sexodelmasviejo=sexo;
+		}
+	
 
+		if(edad<minimo)
+		{		
+			edadmasBaja=edad;
+			nombredelmasjoven=nombre;
 
-}
+		}
+	}
+	if(contadordeMujeres==1)
+	{
 
-if(contadordeMujeres==1)
-{
+		edaddelamujermasvieja=edad;
 
-	edaddelamujermasvieja=edad;
+	}
+	else
+	{
 
-}
-else
-{
+		if(edad>edaddelamujermasvieja)
+		{
+			edaddelamujermasvieja=edad;
+		}
 
-	if(edad>edaddelamujermasvieja)
-{
-	edaddelamujermasvieja=edad;
-}
-
-}
+	}
 
 
 
@@ -292,6 +298,81 @@ document.write("Nombre del mas viejo: "+nombredelmasviejo+"<br>");
 document.write("Nombre del mas joven: "+nombredelmasjoven+"<br>");
 document.write("El sexo del mas viejo es: "+sexodelmasviejo+"<br>");
 document.write("La edad de la mujer mas vieja es: "+edaddelamujermasvieja+"<br>");
+
+*/
+
+var nota;
+var sexo;
+var promediodenotastotales;
+var sumadenotas;
+var notamasbaja;
+var sexodelapersonamasbaja;
+var varonesconnotamayoroiguala6;
+
+notamasbaja=0;
+sumadenotas=0;
+contador=0;
+promediodenotastotales=0;
+varonesconnotamayoroiguala6=0;
+
+while(contador<5)
+
+{
+	contador=contador+1;
+	nota=prompt("Ingrese la nota");
+	nota=parseInt(nota);
+
+	while(isNaN(nota) || nota<0 || nota>10)
+	{
+	nota=prompt("Ingrese la nota entre 0 y 10");
+	nota=parseInt(nota);
+	}
+
+	sexo=prompt("Ingrese el sexo");
+	
+	while(sexo!="m" && sexo!="f")
+		{
+			sexo=prompt("Ingrese el sexo como m o f");
+
+		}
+
+
+
+
+sumadenotas=sumadenotas+nota;
+
+if(contador==1)
+{
+	notamasbaja=nota;
+	sexodelapersonamasbaja=sexo;
+
+}
+else
+{
+	if(nota<notamasbaja)
+	{
+		notamasbaja=nota;
+		sexodelapersonamasbaja=sexo;
+	}
+
+
+}
+
+if(nota>=6 && sexo=="m")
+
+{
+varonesconnotamayoroiguala6=varonesconnotamayoroiguala6+1;
+}
+
+
+}
+
+
+promediodenotastotales=sumadenotas/contador;
+
+alert("El promedio de las notas totales es: "+promediodenotastotales);
+alert("La nota mas baja es: "+notamasbaja+" Y su sexo es: "+sexodelapersonamasbaja);
+alert("Cantidad de varones que su nota haya sido mayor o igual a 6 :"+varonesconnotamayoroiguala6);
 
 
 }
