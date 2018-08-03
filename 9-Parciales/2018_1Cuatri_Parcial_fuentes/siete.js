@@ -1,6 +1,9 @@
 function mostrar()
 {
 
+
+
+
 /* jose M 25
 MARIA F 16
 JESUS M 33
@@ -402,6 +405,42 @@ nombre del mas viejo:			fer	ok
 nombre del mas joven:			maria	ok
 sexo del mas viejo:			f	ok
 nombre de la mujer mas vieja:			fer	
+
+
+
+*/
+
+
+/*
+
+hacer de nuevo con estos datos:
+chequearlo con estos datos
+
+maria f 15 7
+jose m 18 2
+fer f 25 5
+susana f 65 9
+mirta f 99 8
+
+se puede cargar 3 datos mas
+
+
+
+1 nombre de la peor nota
+2 sexo de la mas vieja
+3 edad y sexo de la mejor nota
+4 nombre de la primer mujer q desaprobo
+5 sexo del primer hombre menor d edad
+6 cantidad de aprobas
+7canti aprob feme
+8 aprob mayores d edad
+9 aprob menores d edad
+10sexo nota nombre i edad d la peor nota
+11 nombre edad i sexo d la mejor nota
+plantear com odesafio: contadores, promedios, etc
+edad total
+prom aprob
+prom desap
 
 
 
