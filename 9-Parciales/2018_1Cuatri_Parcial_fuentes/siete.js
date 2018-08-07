@@ -1,6 +1,119 @@
 function mostrar()
 {
 
+var nota;
+var sexo;
+var contador;
+var promediodenotastotales;
+var sumadenotas;
+var notamasbaja;
+var sexopersonamasbaja;
+var cantidaddevaronesmayorq6;
+
+
+cantidaddevaronesmayorq6=0;
+contador=0;
+sumadenotas=0;
+
+
+while(contador<3)
+{
+	contador=contador+1;
+
+
+	nota=prompt("Ingrese la nota");
+	nota=parseInt(nota);
+
+	while(isNaN(nota)||nota<0|| nota>10)
+	{
+		nota=prompt("Reingrese la nota");
+		nota=parseInt(nota);		
+
+	}
+
+
+	sexo=prompt("Ingrese el sexo");
+
+	while(sexo!="m" && sexo!="f")
+	{
+		sexo=prompt("Reingrese el sexo");
+
+	}
+
+
+
+	if(contador==1)
+	{
+		notamasbaja=nota;
+		sexopersonamasbaja=sexo;
+	}
+
+	else
+	{
+		if(nota<notamasbaja)
+		{
+			notamasbaja=nota;
+			sexopersonamasbaja=sexo;
+		}
+
+	}
+
+
+if(sexo=="m" && nota>6)
+{
+	cantidaddevaronesmayorq6=cantidaddevaronesmayorq6+1;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+sumadenotas=sumadenotas+nota;
+
+
+}
+
+
+
+promediodenotastotales=sumadenotas/contador;
+
+
+alert("el promedio de notas totales de: "+promediodenotastotales);
+alert("La nota mas baja es: "+notamasbaja+ " y el sexo de esa persona es: "+sexopersonamasbaja);
+alert("La cantidad de varones aprobados mayores a 6 es de: "+cantidaddevaronesmayorq6);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -304,6 +417,9 @@ document.write("La edad de la mujer mas vieja es: "+edaddelamujermasvieja+"<br>"
 
 */
 
+
+/*
+
 var nota;
 var sexo;
 var promediodenotastotales;
@@ -376,6 +492,8 @@ promediodenotastotales=sumadenotas/contador;
 alert("El promedio de las notas totales es: "+promediodenotastotales);
 alert("La nota mas baja es: "+notamasbaja+" Y su sexo es: "+sexodelapersonamasbaja);
 alert("Cantidad de varones que su nota haya sido mayor o igual a 6 :"+varonesconnotamayoroiguala6);
+
+*/
 
 
 }

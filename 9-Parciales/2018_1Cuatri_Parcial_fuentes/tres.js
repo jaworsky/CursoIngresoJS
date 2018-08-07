@@ -1,6 +1,63 @@
 function mostrar()
 {
 
+var precio;
+var porcentajededescuento;
+var preciofinalcondescuento;
+var descuento;
+
+precio=prompt("Ingrese precio");
+porcentajededescuento=prompt("Ingrese el porcentajededescuento");
+
+precio=parseInt(precio);
+porcentajededescuento=parseInt(porcentajededescuento);
+
+descuento=(porcentajededescuento*precio)/100;
+
+preciofinalcondescuento=precio-descuento;
+
+document.getElementById('elPrecioFinal').value=preciofinalcondescuento;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
 	var precio;
 	var porcentaje;
 	var preciocondescuento;
@@ -27,5 +84,5 @@ function mostrar()
 	// q se muestre en el cuadro, los datos deseados
 	document.getElementById('elPrecioFinal').value=preciofinal;
 	
-
+*/
 }
