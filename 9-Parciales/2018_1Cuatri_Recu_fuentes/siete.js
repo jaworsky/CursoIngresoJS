@@ -24,7 +24,7 @@ contadordevaronesmayoresde18ynotamayora6=0;
 contador=0;
 acomuladordenotas=0;
 
-while(contador<3)
+while(contador<5)
 {
 
 
@@ -82,6 +82,7 @@ else
 	{
 		edaddelmasjoven=edad;
 		sexodelmasjoven=sexo;
+		notadelmasjoven=nota;
 	}
 
 

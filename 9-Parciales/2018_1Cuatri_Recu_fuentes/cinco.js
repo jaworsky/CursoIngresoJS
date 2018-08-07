@@ -1,6 +1,46 @@
 function mostrar()
 {
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 var diadelasemana;
 diadelasemana=prompt("Ingrese un dia de la semana");
 
@@ -27,7 +67,7 @@ switch(diadelasemana)
 alert(mensaje);
 
 
-
+*/
 
 
 
